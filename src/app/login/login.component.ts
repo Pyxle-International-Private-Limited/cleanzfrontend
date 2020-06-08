@@ -16,8 +16,6 @@ export class LoginComponent implements OnInit {
     for (const i in this.validateForm.controls) {
       this.validateForm.controls[i].markAsDirty();
       this.validateForm.controls[i].updateValueAndValidity();
-
-
     }
     if(this.validateForm.controls["userName"].status == "VALID"){
       this.appComponent.isLoggedIn = true;
