@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, MinLengthValidator } from '@angular/forms';
+import { NzNotificationService } from 'ng-zorro-antd/notification';
 
 @Component({
   selector: 'app-add',
@@ -21,18 +22,29 @@ export class AddComponent implements OnInit {
     this.result.email=this.validateForm.controls.email.value;
     this.result.phone=this.validateForm.controls.phone.value;
     this.result.isActive=this.validateForm.controls.isActive.value;
-    debugger
+
+    if(this.validateForm.status ==="VALID"){
+      this.successNotification();
+    }
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private notification: NzNotificationService) {}
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
-      name: ["", [Validators.required]],
+      name: ["", [Validators.pattern('^[a-zA-Z ]*$'), Validators.required]],
       address: [],
-      email: ["",[Validators.required]],
-      phone: [],
+      email: ["",[Validators.email, Validators.required]],
+      phone: ["",[Validators.required]],
       isActive: []
     });
+  }
+
+  successNotification(): void {
+    this.notification.success(
+      'Success',
+      'Provider added successfully.',
+      { nzDuration: 2000 }
+    );
   }
 }
