@@ -1,13 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
-.ant-layout{
-    nz-content{
-        &.no-padding{
-            margin: 0;
-            background: url(./assets/img/bg.jpg) no-repeat center center fixed;
-            background-size: cover;
-            .inner-content{
-                background: none;
-            }
-        }
+$dullGreen: #28a745;
+$brightBlue: #007bff;
+$dullBlue: #17a2b8;
+$yellowGradient:#ffc107 linear-gradient(180deg,#ffca2c,#ffc107);
+$greenGradient:#28a745 linear-gradient(180deg,#48b461,#28a745);
+
+.clear-a::after {
+  clear: both;
+  display: block;
+  content: "";
+  visibility: hidden;
+}
+.float-l{
+    float: left;
+}
+.float-r{
+    float: right;
+}
+
+.ant-layout {
+  nz-content {
+    &.no-padding {
+      margin: 0;
+      background: url(./assets/img/bg.jpg) no-repeat center center fixed;
+      background-size: cover;
+      .inner-content {
+        background: none;
+      }
     }
+  }
+}
+
+.btn-wrapper {
+  &.right-align {
+    .ant-btn-primary {
+      float: right;
+      background: $dullGreen;
+      font-size: 14px;
+      border: 0;
+      margin: 0 0 10px;
+    }
+  }
 }

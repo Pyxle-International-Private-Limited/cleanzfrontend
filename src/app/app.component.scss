@@ -7,6 +7,10 @@
 
 .app-layout {
   height: 100vh;
+  .ant-layout-header{
+    height: 40px;
+    line-height: 38px;
+  }
 }
 
 .menu-sidebar {
@@ -17,7 +21,7 @@
 }
 
 .header-trigger {
-  height: 64px;
+  height: 40px;
   padding: 20px 24px;
   font-size: 20px;
   cursor: pointer;
@@ -63,18 +67,18 @@ nz-header {
 
 .app-header {
   position: relative;
-  height: 64px;
+  height: 40px;
   padding: 0;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 }
 
 nz-content {
-  margin: 24px;
+  margin: 12px;
 }
 
 .inner-content {
-  padding: 24px;
+  padding: 15px;
   background: #fff;
   height: 100%;
 }
