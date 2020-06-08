@@ -1,0 +1,28 @@
+<div class="providers-list-wrapper">
+    <h2>Services</h2>
+    <div class="row btn-wrapper right-align clear-a">
+        <button nz-button nzType="primary" [routerLink]="'../add'"><i nz-icon nzType="plus"></i>Add New</button>
+    </div>
+    <nz-table #basicTable [nzData]="services">
+      <thead>
+        <tr>
+          <th>Service Title</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.serviceTitle }}</td>
+          <td>
+            <span *ngIf="data.isactive">Active</span>
+            <span *ngIf="!data.isactive">Inactive</span>
+          </td>
+          <td>
+            <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this provider?" nzPopconfirmPlacement="bottom"
+              (nzOnConfirm)="confirmDelete()" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
+                nzTheme="outline"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
