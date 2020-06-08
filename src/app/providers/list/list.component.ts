@@ -20,12 +20,8 @@ export class ListComponent implements OnInit{
     });
   }
 
-  addNewProvider(){
-    this.router.navigate(['./providers/add']);
-  }
-
   cancelDelete(): void {
-    this.nzMessageService.info('click cancel');
+    this.nzMessageService.info('Canceled by user');
   }
 
   confirmDelete(): void {
