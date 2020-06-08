@@ -10,7 +10,6 @@
                         <input nz-input name="name" formControlName="name" type="name" id="name" placeholder="Name">
                     </nz-input-group>
                     <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.required">Name is required.</div>
-                    <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.minLength">minimum.</div>
                 </nz-form-control>
 
             </nz-form-item>
@@ -28,6 +27,7 @@
                     <nz-input-group nzPrefixIcon="mail">
                         <input nz-input name="email" formControlName="email" type="email" id="email" placeholder="Email">
                     </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.email.dirty || validateForm.controls.email.touched) && validateForm.controls.email.errors && validateForm.controls.email.errors.required">Email is required.</div>
                 </nz-form-control>
             </nz-form-item>
             <nz-form-item>
@@ -36,6 +36,7 @@
                     <nz-input-group nzPrefixIcon="phone">
                         <input nz-input name="phone" formControlName="phone" type="phone" id="phone" placeholder="Telephone">
                     </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.phone.dirty || validateForm.controls.phone.touched) && validateForm.controls.phone.errors && validateForm.controls.phone.errors.required">Telephone is required.</div>
                 </nz-form-control>
             </nz-form-item>
             <label nz-checkbox formControlName="isActive">Active</label>
