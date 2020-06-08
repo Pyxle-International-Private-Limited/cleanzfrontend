@@ -32,9 +32,9 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
-      name: ["", [Validators.required]],
+      name: ["", [Validators.pattern('^[a-zA-Z ]*$'), Validators.required]],
       address: [],
-      email: ["",[Validators.required]],
+      email: ["",[Validators.email, Validators.required]],
       phone: ["",[Validators.required]],
       isActive: []
     });

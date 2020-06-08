@@ -10,6 +10,7 @@
                         <input nz-input name="name" formControlName="name" type="name" id="name" placeholder="Name">
                     </nz-input-group>
                     <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.required">Name is required.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.pattern">Only characters allowed to enter.</div>
                 </nz-form-control>
 
             </nz-form-item>
@@ -28,6 +29,7 @@
                         <input nz-input name="email" formControlName="email" type="email" id="email" placeholder="Email">
                     </nz-input-group>
                     <div class="error-msg" *ngIf="(validateForm.controls.email.dirty || validateForm.controls.email.touched) && validateForm.controls.email.errors && validateForm.controls.email.errors.required">Email is required.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.email.dirty || validateForm.controls.email.touched) && validateForm.controls.email.errors && validateForm.controls.email.errors.email">Invalid Email.</div>
                 </nz-form-control>
             </nz-form-item>
             <nz-form-item>
