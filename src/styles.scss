@@ -16,7 +16,14 @@ $greenGradient:#28a745 linear-gradient(180deg,#48b461,#28a745);
 .float-r{
     float: right;
 }
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
 
+h1,h2,h3,h4,h5,h6,.ant-btn{
+  font-weight: 600;
+}
 .ant-layout {
   nz-content {
     &.no-padding {
