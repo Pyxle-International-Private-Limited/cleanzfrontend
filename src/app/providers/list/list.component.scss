@@ -1,0 +1,9 @@
+@import "../../../init.scss";
+.providers-list-wrapper{
+    td{
+        .anticon{
+            font-size: 16px;
+            color: $brightRed;
+        }
+    }
+}

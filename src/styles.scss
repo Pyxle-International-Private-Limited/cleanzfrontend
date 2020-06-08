@@ -1,8 +1,4 @@
-$dullGreen: #28a745;
-$brightBlue: #007bff;
-$dullBlue: #17a2b8;
-$yellowGradient:#ffc107 linear-gradient(180deg,#ffca2c,#ffc107);
-$greenGradient:#28a745 linear-gradient(180deg,#48b461,#28a745);
+@import "./init.scss";
 
 .clear-a::after {
   clear: both;

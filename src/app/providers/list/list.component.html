@@ -10,7 +10,8 @@
         <th>Address</th>
         <th>Email</th>
         <th>Telephone</th>
-        <th>Action</th>
+        <th>Status</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -20,10 +21,10 @@
         <td>{{ data.email }}</td>
         <td>{{ data.telephone }}</td>
         <td>
-          <a>Action 一 {{ data.name }}</a>
-          <nz-divider nzType="vertical"></nz-divider>
-          <a>Delete</a>
+          <span *ngIf="data.isactive">Active</span>
+          <span *ngIf="!data.isactive">Inactive</span>
         </td>
+        <td><i nz-icon nzType="delete" nzTheme="outline"></i></td>
       </tr>
     </tbody>
   </nz-table>
