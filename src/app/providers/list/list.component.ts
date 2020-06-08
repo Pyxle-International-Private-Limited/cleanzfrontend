@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { ApiService } from '../../api.service';
 import { Router } from '@angular/router';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-list',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class ListComponent implements OnInit{
   providers : object;
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router, private nzMessageService: NzMessageService) { }
 
   ngOnInit(): void {
       this.apiService.getProviders().subscribe((data)=>{
@@ -21,5 +22,13 @@ export class ListComponent implements OnInit{
 
   addNewProvider(){
     this.router.navigate(['./providers/add']);
+  }
+
+  cancelDelete(): void {
+    this.nzMessageService.info('click cancel');
+  }
+
+  confirmDelete(): void {
+    this.nzMessageService.info('Provider deleted successfully');
   }
 }

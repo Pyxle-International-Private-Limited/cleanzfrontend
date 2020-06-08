@@ -1,8 +1,4 @@
-$dullGreen: #28a745;
-$brightBlue: #007bff;
-$dullBlue: #17a2b8;
-$yellowGradient:#ffc107 linear-gradient(180deg,#ffca2c,#ffc107);
-$greenGradient:#28a745 linear-gradient(180deg,#48b461,#28a745);
+@import "./init.scss";
 
 .clear-a::after {
   clear: both;
@@ -16,7 +12,17 @@ $greenGradient:#28a745 linear-gradient(180deg,#48b461,#28a745);
 .float-r{
     float: right;
 }
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  .error-msg{
+    color: #ff0000;
+  }
+}
 
+h1,h2,h3,h4,h5,h6,.ant-btn{
+  font-weight: 600;
+}
 .ant-layout {
   nz-content {
     &.no-padding {
@@ -40,4 +46,7 @@ $greenGradient:#28a745 linear-gradient(180deg,#48b461,#28a745);
       margin: 0 0 10px;
     }
   }
+}
+.ant-popover-inner{
+  padding: 5px 15px 5px;
 }

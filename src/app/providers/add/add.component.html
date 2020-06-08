@@ -2,20 +2,23 @@
     
     <div class="form-inner-wrapper">
         <h2>Add a provider</h2>
-        <form nz-form>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
             <nz-form-item>
                 <nz-form-label [nzSpan]="4" nzFor="name">Name</nz-form-label>
                 <nz-form-control [nzSpan]="24">
                     <nz-input-group nzPrefixIcon="user">
-                        <input nz-input name="name" type="name" id="name" placeholder="Name">
+                        <input nz-input name="name" formControlName="name" type="name" id="name" placeholder="Name">
                     </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.required">Name is required.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.minLength">minimum.</div>
                 </nz-form-control>
+
             </nz-form-item>
             <nz-form-item>
                 <nz-form-label [nzSpan]="4" nzFor="address">Address</nz-form-label>
                 <nz-form-control [nzSpan]="24">
                     <nz-input-group nzPrefixIcon="environment">
-                        <input nz-input name="address" type="address" id="address" placeholder="Address">
+                        <input nz-input name="address" formControlName="address" type="address" id="address" placeholder="Address">
                     </nz-input-group>
                 </nz-form-control>
             </nz-form-item>
@@ -23,7 +26,7 @@
                 <nz-form-label [nzSpan]="4" nzFor="email">Email</nz-form-label>
                 <nz-form-control [nzSpan]="24">
                     <nz-input-group nzPrefixIcon="mail">
-                        <input nz-input name="email" type="email" id="email" placeholder="Email">
+                        <input nz-input name="email" formControlName="email" type="email" id="email" placeholder="Email">
                     </nz-input-group>
                 </nz-form-control>
             </nz-form-item>
@@ -31,13 +34,13 @@
                 <nz-form-label [nzSpan]="4" nzFor="phone">Telephone</nz-form-label>
                 <nz-form-control [nzSpan]="24">
                     <nz-input-group nzPrefixIcon="phone">
-                        <input nz-input name="phone" type="phone" id="phone" placeholder="Telephone">
+                        <input nz-input name="phone" formControlName="phone" type="phone" id="phone" placeholder="Telephone">
                     </nz-input-group>
                 </nz-form-control>
             </nz-form-item>
-            <label nz-checkbox>Active</label>
+            <label nz-checkbox formControlName="isActive">Active</label>
             <div class="btn-wrapper clear-a">
-                <button class="float-r" nz-button nzType="primary">Submit</button>
+                <button class="float-r" type="submit" nz-button nzType="primary">Submit</button>
                 <button type="reset" nz-button nzType="default">Cancel</button>
             </div>
         </form>
