@@ -23,13 +23,13 @@ import en from '@angular/common/locales/en';
 import { LoginComponent } from './login/login.component';
 import { ListComponent } from './providers/list/list.component';
 import { AddComponent } from './providers/add/add.component';
-import { ClientLocationComponent } from './clients/client-location/client-location.component';
+import { EmployeeListComponent } from './employees/list/list.component';
+import { ServiceListComponent } from './services/list/list.component';
+import { ClientListComponent } from './clients/list/list.component';
+import { ClientAddComponent } from './clients/add/add.component';
+import { LocationComponent } from './clients/location/location.component';
+import { RoleComponent } from './employees/role/role.component';
 import { SubServicesComponent } from './services/sub-services/sub-services.component';
-import { EmployeeRolesComponent } from './employees/employee-roles/employee-roles.component';
-import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
-import { ServicesListComponent } from './services/services-list/services-list.component';
-import { ClientListComponent } from './clients/client-list/client-list.component';
-import { ClientAddComponent } from './clients/client-add/client-add.component';
 
 registerLocaleData(en);
 
@@ -39,13 +39,16 @@ registerLocaleData(en);
     LoginComponent,
     ListComponent,
     AddComponent,
-    ClientLocationComponent,
+    LocationComponent,
     SubServicesComponent,
-    EmployeeRolesComponent,
+    RoleComponent,
     EmployeeListComponent,
-    ServicesListComponent,
+    ServiceListComponent,
     ClientListComponent,
     ClientAddComponent,
+    LocationComponent,
+    RoleComponent,
+    SubServicesComponent,
   ],
   imports: [
     BrowserModule,

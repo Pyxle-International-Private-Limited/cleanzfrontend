@@ -3,25 +3,25 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ListComponent } from './providers/list/list.component';
 import { AddComponent } from './providers/add/add.component';
-import { ClientLocationComponent } from './clients/client-location/client-location.component';
-import { ClientListComponent } from './clients/client-list/client-list.component';
-import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
-import { EmployeeRolesComponent } from './employees/employee-roles/employee-roles.component';
-import { ServicesListComponent } from './services/services-list/services-list.component';
+import { LocationComponent } from './clients/location/location.component';
+import { ClientListComponent } from './clients/list/list.component';
+import { EmployeeListComponent } from './employees/list/list.component';
+import { ServiceListComponent } from './services/list/list.component';
 import { SubServicesComponent } from './services/sub-services/sub-services.component';
-import { ClientAddComponent } from './clients/client-add/client-add.component';
+import { RoleComponent } from './employees/role/role.component';
+import { ClientAddComponent } from './clients/add/add.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'providers/list', component: ListComponent },
   { path: 'providers/add', component: AddComponent },
-  { path: 'clients/client/list', component: ClientListComponent },
-  { path: 'clients/client/location', component: ClientLocationComponent },
-  { path: 'employees/employee/list', component: EmployeeListComponent },
-  { path: 'employees/employee/roles', component: EmployeeRolesComponent },
-  { path: 'services/services/list', component: ServicesListComponent },
-  { path: 'services/sub/services', component: SubServicesComponent },
-  { path: 'clients/client/add', component: ClientAddComponent },
+  { path: 'clients/list', component: ClientListComponent },
+  { path: 'clients/client_locations', component: LocationComponent },
+  { path: 'employees/list', component: EmployeeListComponent },
+  { path: 'employees/employee_roles', component: RoleComponent },
+  { path: 'services/list', component: ServiceListComponent },
+  { path: 'services/sub_services', component: SubServicesComponent },
+  { path: 'clients/add', component: ClientAddComponent },
   { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
 ];
 

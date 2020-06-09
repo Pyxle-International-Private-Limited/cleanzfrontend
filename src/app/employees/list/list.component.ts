@@ -3,10 +3,11 @@ import { ApiService } from 'src/app/api.service';
 import { Router } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
+
 @Component({
-  selector: 'app-employee-list',
-  templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.scss']
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
   employees : object;
@@ -28,5 +29,6 @@ export class EmployeeListComponent implements OnInit {
   confirmDelete(): void {
     this.nzMessageService.info('Provider deleted successfully');
   }
+
 
 }
