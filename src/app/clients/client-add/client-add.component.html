@@ -1,0 +1,53 @@
+<div class="add-provider-wrapper">
+    
+    <div class="form-inner-wrapper">
+        <h2>Add a client</h2>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+            <nz-form-item>
+                <nz-form-label [nzSpan]="4" nzFor="name">Name</nz-form-label>
+                <nz-form-control [nzSpan]="24">
+                    <nz-input-group nzPrefixIcon="user">
+                        <input nz-input name="name" formControlName="name" type="name" id="name" placeholder="Name">
+                    </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.required">Name is required.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.name.dirty || validateForm.controls.name.touched) && validateForm.controls.name.errors && validateForm.controls.name.errors.pattern">Only characters allowed to enter.</div>
+                </nz-form-control>
+
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSpan]="4" nzFor="address">Address</nz-form-label>
+                <nz-form-control [nzSpan]="24">
+                    <nz-input-group nzPrefixIcon="environment">
+                        <input nz-input name="address" formControlName="address" type="address" id="address" placeholder="Address">
+                    </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.address.dirty || validateForm.controls.address.touched) && validateForm.controls.address.errors && validateForm.controls.address.errors.required">Address is required.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.address.dirty || validateForm.controls.address.touched) && validateForm.controls.address.errors && validateForm.controls.address.errors.pattern">Invalid Address.</div>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSpan]="4" nzFor="email">Email</nz-form-label>
+                <nz-form-control [nzSpan]="24">
+                    <nz-input-group nzPrefixIcon="mail">
+                        <input nz-input name="email" formControlName="email" type="email" id="email" placeholder="Email">
+                    </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.email.dirty || validateForm.controls.email.touched) && validateForm.controls.email.errors && validateForm.controls.email.errors.required">Email is required.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.email.dirty || validateForm.controls.email.touched) && validateForm.controls.email.errors && validateForm.controls.email.errors.email">Invalid Email.</div>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSpan]="4" nzFor="phone">Telephone</nz-form-label>
+                <nz-form-control [nzSpan]="24">
+                    <nz-input-group nzPrefixIcon="phone">
+                        <input nz-input name="phone" formControlName="phone" type="phone" id="phone" placeholder="Telephone">
+                    </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.phone.dirty || validateForm.controls.phone.touched) && validateForm.controls.phone.errors && validateForm.controls.phone.errors.required">Telephone is required.</div>
+                </nz-form-control>
+            </nz-form-item>
+            <label nz-checkbox formControlName="isActive">Active</label>
+            <div class="btn-wrapper clear-a">
+                <button class="float-r" type="submit" nz-button nzType="primary">Submit</button>
+                <button type="reset" nz-button nzType="default">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
