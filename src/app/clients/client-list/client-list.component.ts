@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/api.service';
+import { ApiService } from '../../api.service';
 import { Router } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
@@ -19,16 +19,12 @@ export class ClientListComponent implements OnInit {
       this.clients = data;
     });
   }
-  addNewClient(){
-    this.router.navigate(['#']);
-  }
   cancelDelete(): void {
     this.nzMessageService.info('Canceled by user');
   }
 
-  confirmDelete(): void {
+  confirmDelete(code:any, name:any): void {
+    console.log(code + " and " + name);
     this.nzMessageService.info('Provider deleted successfully');
   }
-
-
 }
