@@ -20,8 +20,7 @@
                     <nz-input-group nzPrefixIcon="environment">
                         <input nz-input name="address" formControlName="address" type="address" id="address" placeholder="Address">
                     </nz-input-group>
-                    <div class="error-msg" *ngIf="(validateForm.controls.email.dirty || validateForm.controls.email.touched) && validateForm.controls.email.errors && validateForm.controls.email.errors.required">Email is required.</div>
-                    <div class="error-msg" *ngIf="(validateForm.controls.email.dirty || validateForm.controls.email.touched) && validateForm.controls.email.errors && validateForm.controls.email.errors.email">Invalid Email.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.address.dirty || validateForm.controls.address.touched) && validateForm.controls.address.errors && validateForm.controls.address.errors.required">Address is required.</div>
                 </nz-form-control>
             </nz-form-item>
             <nz-form-item>
