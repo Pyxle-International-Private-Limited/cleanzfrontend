@@ -1,7 +1,7 @@
-<div class="providers-list-wrapper">
+<div class="client-list-wrapper">
     <h2>clients</h2>
     <div class="row btn-wrapper right-align clear-a">
-        <button nz-button nzType="primary" (click)="addNewClient()"><i nz-icon nzType="plus"></i>Add New</button>
+        <button nz-button nzType="primary" [routerLink]="'../add'"><i nz-icon nzType="plus"></i>Add New</button>
     </div>
     <nz-table #basicTable [nzData]="clients">
       <thead>
@@ -25,7 +25,7 @@
           </td>
           <td>
             <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this provider?" nzPopconfirmPlacement="bottom"
-              (nzOnConfirm)="confirmDelete()" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
+              (nzOnConfirm)="confirmDelete(data.clientcode, data.name)" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
                 nzTheme="outline"></i></a>
           </td>
         </tr>

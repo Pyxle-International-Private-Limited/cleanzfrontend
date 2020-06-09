@@ -26,7 +26,7 @@
         </td>
         <td>
           <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this provider?" nzPopconfirmPlacement="bottom"
-            (nzOnConfirm)="confirmDelete()" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
+            (nzOnConfirm)="confirmDelete(data.providercode, data.name)" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
               nzTheme="outline"></i></a>
         </td>
       </tr>
