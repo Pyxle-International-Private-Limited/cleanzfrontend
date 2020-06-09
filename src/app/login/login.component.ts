@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     }
     if(this.validateForm.controls["userName"].status == "VALID"){
       this.appComponent.isLoggedIn = true;
-      this.router.navigate(['./providers/list']);
+      this.router.navigate(['./dashboard']);
     }
   }
 

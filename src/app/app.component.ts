@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isCollapsed = false;
-  isLoggedIn: boolean = true;
-  // isCollapsed = false;
-
-  // toggleCollapsed(): void {
-  //   this.isCollapsed = !this.isCollapsed;
-  // }
+  isLoggedIn: boolean = false;
 }

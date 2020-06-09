@@ -10,9 +10,9 @@ import { ServiceListComponent } from './services/list/list.component';
 import { SubServicesComponent } from './services/sub-services/sub-services.component';
 import { RoleComponent } from './employees/role/role.component';
 import { ClientAddComponent } from './clients/add/add.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
   { path: 'providers/list', component: ListComponent },
   { path: 'providers/add', component: AddComponent },
   { path: 'clients/list', component: ClientListComponent },
@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'services/list', component: ServiceListComponent },
   { path: 'services/sub_services', component: SubServicesComponent },
   { path: 'clients/add', component: ClientAddComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
 ];
 
