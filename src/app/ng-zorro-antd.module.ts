@@ -133,7 +133,7 @@ import { NzResizableModule } from 'ng-zorro-antd/resizable';
     NzTypographyModule,
     NzUploadModule,
     NzWaveModule,
-    NzResizableModule
+    NzResizableModule,
   ]
 })
 export class DemoNgZorroAntdModule {

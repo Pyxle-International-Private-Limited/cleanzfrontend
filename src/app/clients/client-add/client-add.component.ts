@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, MinLengthValidator } from '@angular/forms';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 
+
 @Component({
-  selector: 'app-add',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  selector: 'app-client-add',
+  templateUrl: './client-add.component.html',
+  styleUrls: ['./client-add.component.scss']
 })
-export class AddComponent implements OnInit {
+export class ClientAddComponent implements OnInit {
 
   validateForm!: FormGroup;
   result: any = {};
@@ -47,4 +48,5 @@ export class AddComponent implements OnInit {
       { nzDuration: 2000 }
     );
   }
+
 }

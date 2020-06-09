@@ -1,0 +1,25 @@
+.add-provider-wrapper {
+    ::placeholder {
+      color: #888;
+      opacity: 1; /* Firefox */
+    }
+    .ant-form-item-label {
+      display: none;
+    }
+    h2 {
+      margin: 0 0 15px;
+    }
+    .form-inner-wrapper {
+      width: 100%;
+      max-width: 768px;
+      border: 1px solid #ddd;
+      padding: 5px 10px 0px;
+      border-radius: 5px;
+      .btn-wrapper {
+        margin: 15px -10px 0;
+        background: #eee;
+        padding: 10px;
+      }
+    }
+  }
+  

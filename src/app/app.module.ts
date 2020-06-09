@@ -29,6 +29,7 @@ import { EmployeeRolesComponent } from './employees/employee-roles/employee-role
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { ServicesListComponent } from './services/services-list/services-list.component';
 import { ClientListComponent } from './clients/client-list/client-list.component';
+import { ClientAddComponent } from './clients/client-add/client-add.component';
 
 registerLocaleData(en);
 
@@ -44,6 +45,7 @@ registerLocaleData(en);
     EmployeeListComponent,
     ServicesListComponent,
     ClientListComponent,
+    ClientAddComponent,
   ],
   imports: [
     BrowserModule,
