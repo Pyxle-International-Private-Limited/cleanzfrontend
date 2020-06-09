@@ -30,6 +30,7 @@ import { ClientAddComponent } from './clients/add/add.component';
 import { LocationComponent } from './clients/location/location.component';
 import { RoleComponent } from './employees/role/role.component';
 import { SubServicesComponent } from './services/sub-services/sub-services.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 registerLocaleData(en);
 
@@ -49,6 +50,7 @@ registerLocaleData(en);
     LocationComponent,
     RoleComponent,
     SubServicesComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
