@@ -34,23 +34,25 @@
 
 .sidebar-logo {
   position: relative;
-  height: 64px;
-  padding-left: 24px;
+  height: auto;
+  padding: 10px 0 0;
   overflow: hidden;
-  line-height: 64px;
-  background: #001529;
-  transition: all .3s;
-}
-
-.sidebar-logo img {
-  display: inline-block;
-  height: 32px;
-  width: 32px;
-  vertical-align: middle;
+  background: none;
+  transition: all 0.3s;
+  a{
+    display: block;
+    text-align: center;
+  }
+  img{
+    display: inline-block;
+    height: auto;
+    width: 150px;
+    vertical-align: middle;
+  }
 }
 
 .sidebar-logo h1 {
-  display: inline-block;
+  display:none;
   margin: 0 0 0 20px;
   color: #fff;
   font-weight: 600;
