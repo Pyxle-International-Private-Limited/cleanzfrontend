@@ -1,7 +1,7 @@
 <div class="providers-list-wrapper">
     <h2>Employees</h2>
     <div class="row btn-wrapper right-align clear-a">
-        <button nz-button nzType="primary" (click)="addNewEmployee()"><i nz-icon nzType="plus"></i>Add New</button>
+        <button nz-button nzType="primary" [routerLink]="'../add'"><i nz-icon nzType="plus"></i>Add New</button>
     </div>
     <nz-table #basicTable [nzData]="employees">
       <thead>
@@ -12,12 +12,13 @@
           <th>Mobile</th>
           <th>Username</th>
           <th>Action</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let data of basicTable.data">
-          <td>{{ data.firstName }}</td>
-          <td>{{ data.lastName }}</td>
+          <td>{{ data.firstname }}</td>
+          <td>{{ data.lastname }}</td>
           <td>{{ data.email }}</td>
           <td>{{ data.mobile }}</td>
           <td>{{ data.username }}</td>
@@ -26,8 +27,8 @@
             <span *ngIf="!data.isactive">Inactive</span>
           </td>
           <td>
-            <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this provider?" nzPopconfirmPlacement="bottom"
-              (nzOnConfirm)="confirmDelete()" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
+            <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this employee?" nzPopconfirmPlacement="bottom"
+              (nzOnConfirm)="confirmDelete(data.nic_ssn_ppn, data.firstname)" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
                 nzTheme="outline"></i></a>
           </td>
         </tr>

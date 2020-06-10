@@ -22,8 +22,9 @@ export class ServiceListComponent implements OnInit {
     this.nzMessageService.info('Canceled by user');
   }
 
-  confirmDelete(): void {
-    this.nzMessageService.info('Provider deleted successfully');
+  confirmDelete(code:any, name:any): void {
+    console.log(code + " and " + name);
+    this.nzMessageService.info('Service deleted successfully');
   }
 
 

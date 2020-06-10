@@ -11,6 +11,9 @@ import { SubServicesComponent } from './services/sub-services/sub-services.compo
 import { RoleComponent } from './employees/role/role.component';
 import { ClientAddComponent } from './clients/add/add.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmployeeAddComponent } from './employees/add/add.component';
+import { ServiceAddComponent } from './services/add/add.component';
+
 
 const routes: Routes = [
   { path: 'providers/list', component: ListComponent },
@@ -23,6 +26,8 @@ const routes: Routes = [
   { path: 'services/sub_services', component: SubServicesComponent },
   { path: 'clients/add', component: ClientAddComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'employees/add', component: EmployeeAddComponent },
+  { path: 'services/add', component: ServiceAddComponent },
   { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
 ];
 

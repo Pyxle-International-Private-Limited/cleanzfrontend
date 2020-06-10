@@ -6,20 +6,21 @@
     <nz-table #basicTable [nzData]="services">
       <thead>
         <tr>
-          <th>Service Title</th>
+          <th>Title</th>
           <th>Action</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let data of basicTable.data">
-          <td>{{ data.serviceTitle }}</td>
+          <td>{{ data.title }}</td>
           <td>
             <span *ngIf="data.isactive">Active</span>
             <span *ngIf="!data.isactive">Inactive</span>
           </td>
           <td>
-            <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this provider?" nzPopconfirmPlacement="bottom"
-              (nzOnConfirm)="confirmDelete()" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
+            <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this service?" nzPopconfirmPlacement="bottom"
+              (nzOnConfirm)="confirmDelete(data.servicecode, data.name)" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
                 nzTheme="outline"></i></a>
           </td>
         </tr>

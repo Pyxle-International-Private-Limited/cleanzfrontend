@@ -31,6 +31,8 @@ import { LocationComponent } from './clients/location/location.component';
 import { RoleComponent } from './employees/role/role.component';
 import { SubServicesComponent } from './services/sub-services/sub-services.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmployeeAddComponent } from './employees/add/add.component';
+import { ServiceAddComponent } from './services/add/add.component';
 
 registerLocaleData(en);
 
@@ -51,6 +53,8 @@ registerLocaleData(en);
     RoleComponent,
     SubServicesComponent,
     DashboardComponent,
+    EmployeeAddComponent,
+    ServiceAddComponent
   ],
   imports: [
     BrowserModule,

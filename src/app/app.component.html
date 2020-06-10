@@ -21,8 +21,13 @@
             <li nz-menu-item>
               <a routerLink="/clients/list">View Clients</a>
             </li>
-            <li nz-menu-item>
-              <a routerLink="/clients/client_locations">Clients Location</a>
+            
+            <li nz-submenu nzTitle="Client Locations">
+              <ul>
+                <li nz-menu-item>
+                  <a routerLink="/clients/client_locations">View Client Locations</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -36,10 +41,14 @@
         <li nz-submenu nzTitle="Services" nzIcon="appstore">
           <ul>
             <li nz-menu-item>
-              <a routerLink="services/sub_services">View Services</a>
+              <a routerLink="services/list">View Services</a>
             </li>
-            <li nz-menu-item>
-              <a routerLink="services/sub_services">sub services</a>
+            <li nz-submenu nzTitle="Sub Services">
+              <ul>
+                <li nz-menu-item>
+                  <a routerLink="services/sub_services">View Sub Services</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
