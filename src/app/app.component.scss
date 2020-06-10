@@ -46,8 +46,9 @@
   img{
     display: inline-block;
     height: auto;
-    width: 150px;
+    width: 90px;
     vertical-align: middle;
+    margin: 5px 0 20px;
   }
 }
 
@@ -83,4 +84,9 @@ nz-content {
   padding: 15px;
   background: #fff;
   height: 100%;
+  &.has-bg{
+    background-image: url('../assets/img/bg.png');
+      background-repeat: no-repeat;
+      background-position: bottom right;
+  }
 }

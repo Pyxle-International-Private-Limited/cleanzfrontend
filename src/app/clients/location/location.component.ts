@@ -14,8 +14,9 @@ export class LocationComponent implements OnInit {
   constructor(private apiService: ApiService, private router: Router,private nzMessageService: NzMessageService) { }
 
   ngOnInit(): void {
-      this.apiService.getClientLocations().subscribe((data)=>{
+      this.apiService.getClientLocations().subscribe((data:any)=>{
       this.locations = data;
+      console.log(this.locations);
     });
   }
  

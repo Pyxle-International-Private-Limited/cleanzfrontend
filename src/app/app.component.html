@@ -9,9 +9,9 @@
     </div>
     <div class="wrapper">
       <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
-        <li nz-menu-item>
+        <li nz-menu-item nzSelected nzTitle="Dashboard">
           <i nz-icon nzType="dashboard" nzTheme="outline"></i>
-          <a routerLink="/providers/list">Dashboard</a>
+          <a routerLink="./dashboard">Dashboard</a>
         </li>
         <li nz-submenu nzTitle="Providers" nzIcon="shop">
           <ul>
@@ -68,7 +68,7 @@
       </div>
     </nz-header>
     <nz-content *ngIf="isLoggedIn">
-      <div class="inner-content">
+      <div class="inner-content has-bg">
         <router-outlet></router-outlet>
       </div>
     </nz-content>
