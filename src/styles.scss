@@ -52,3 +52,8 @@ h1,h2,h3,h4,h5,h6,.ant-btn{
 .ant-popover-inner{
   padding: 5px 15px 5px;
 }
+.cdk-overlay-container{
+  .ant-dropdown{
+    margin-top: 0;
+  }
+}
