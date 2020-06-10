@@ -9,19 +9,23 @@
     </div>
     <div class="wrapper">
       <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
-        <li nz-submenu nzTitle="Providers" nzIcon="appstore">
+        <li nz-menu-item>
+          <i nz-icon nzType="dashboard" nzTheme="outline"></i>
+          <a routerLink="/providers/list">Dashboard</a>
+        </li>
+        <li nz-submenu nzTitle="Providers" nzIcon="shop">
           <ul>
             <li nz-menu-item>
               <a routerLink="/providers/list">View Providers</a>
             </li>
           </ul>
         </li>
-        <li nz-submenu nzTitle="Clients" nzIcon="appstore">
+        <li nz-submenu nzTitle="Clients" nzIcon="team">
           <ul>
             <li nz-menu-item>
               <a routerLink="/clients/list">View Clients</a>
             </li>
-            
+
             <li nz-submenu nzTitle="Client Locations">
               <ul>
                 <li nz-menu-item>
@@ -31,14 +35,14 @@
             </li>
           </ul>
         </li>
-        <li nz-submenu nzTitle="Employees" nzIcon="appstore">
+        <li nz-submenu nzTitle="Employees" nzIcon="user-switch">
           <ul>
             <li nz-menu-item>
               <a routerLink="/employees/list">View Employees</a>
             </li>
           </ul>
         </li>
-        <li nz-submenu nzTitle="Services" nzIcon="appstore">
+        <li nz-submenu nzTitle="Services" nzIcon="tool">
           <ul>
             <li nz-menu-item>
               <a routerLink="services/list">View Services</a>
