@@ -1,1 +1,20 @@
-<p>sub-services works!</p>
+<div class="client-list-wrapper">
+    <h2>Sub Services</h2>
+    <a nz-dropdown [nzDropdownMenu]="menu">
+      Sub Services
+      <i nz-icon nzType="down"></i>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>
+          <nz-table #basicTable [nzData]="sub_services">
+          <tbody>
+            <tr *ngFor="let data of basicTable.data">
+              <td>{{ data.title }}</td>
+            </tr>
+          </tbody>
+        </nz-table>
+        </li>
+      </ul>
+    </nz-dropdown-menu>
+</div>

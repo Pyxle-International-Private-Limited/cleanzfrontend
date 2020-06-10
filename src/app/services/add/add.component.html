@@ -1,0 +1,25 @@
+<div class="add-provider-wrapper">
+    
+    <div class="form-inner-wrapper">
+        <h2>Add a Service</h2>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+            <nz-form-item>
+                <nz-form-label [nzSpan]="4" nzFor="name">Title</nz-form-label>
+                <nz-form-control [nzSpan]="24">
+                    <nz-input-group nzPrefixIcon="user">
+                        <input nz-input name="title" formControltitle="title" type="title" id="title" placeholder="Title">
+                    </nz-input-group>
+                    <div class="error-msg" *ngIf="(validateForm.controls.title.dirty || validateForm.controls.title.touched) && validateForm.controls.title.errors && validateForm.controls.title.errors.required">title is required.</div>
+                    <div class="error-msg" *ngIf="(validateForm.controls.title.dirty || validateForm.controls.title.touched) && validateForm.controls.title.errors && validateForm.controls.title.errors.pattern">Only characters allowed to enter.</div>
+                </nz-form-control>
+
+            </nz-form-item>
+            
+            <label nz-checkbox formControlName="isActive">Active</label>
+            <div class="btn-wrapper clear-a">
+                <button class="float-r" type="submit" nz-button nzType="primary">Submit</button>
+                <button type="reset" nz-button nzType="default">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

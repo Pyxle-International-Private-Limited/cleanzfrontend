@@ -19,16 +19,13 @@ export class EmployeeListComponent implements OnInit {
       this.employees = data;
     });
   }
-  addNewEmployee(){
-    this.router.navigate(['#']);
-  }
   cancelDelete(): void {
     this.nzMessageService.info('Canceled by user');
   }
 
-  confirmDelete(): void {
-    this.nzMessageService.info('Provider deleted successfully');
+  confirmDelete(code:any, name:any): void {
+    console.log(code + " and " + name);
+    this.nzMessageService.info('Employee deleted successfully');
   }
-
 
 }

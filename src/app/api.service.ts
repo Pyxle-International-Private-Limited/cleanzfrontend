@@ -21,4 +21,10 @@ export class ApiService {
   getService(){
     return this.httpClient.get(`http://localhost:8000/api/services`);
   }
+  getClientLocations(){
+    return this.httpClient.get(`http://localhost:8000/api/client_locations`);
+  }
+  getSubServices(){
+    return this.httpClient.get(`http://localhost:8000/api/sub_services`);
+  }
 }

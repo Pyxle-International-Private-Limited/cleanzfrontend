@@ -25,7 +25,7 @@ export class ClientListComponent implements OnInit {
 
   confirmDelete(code:any, name:any): void {
     console.log(code + " and " + name);
-    this.nzMessageService.info('Provider deleted successfully');
+    this.nzMessageService.info('Client deleted successfully');
   }
 
 }

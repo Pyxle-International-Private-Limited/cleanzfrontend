@@ -1,1 +1,20 @@
-<p>location works!</p>
+<div class="client-list-wrapper">
+    <h2>Locations</h2>
+    <a nz-dropdown [nzDropdownMenu]="menu">
+      Locations
+      <i nz-icon nzType="down"></i>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>
+          <nz-table #basicTable [nzData]="locations">
+          <tbody>
+            <tr *ngFor="let data of basicTable.data">
+              <td>{{ data.name }}</td>
+            </tr>
+          </tbody>
+        </nz-table>
+        </li>
+      </ul>
+    </nz-dropdown-menu>
+</div>
