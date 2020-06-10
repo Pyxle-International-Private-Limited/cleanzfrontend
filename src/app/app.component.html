@@ -2,9 +2,9 @@
   <nz-sider *ngIf="isLoggedIn" class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md"
     [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-        <h1>Ant Design Of Angular</h1>
+      <a [routerLink]="'./dashboard'">
+        <img src="../assets/img/logo.png" alt="logo">
+        <h1>Cleanz</h1>
       </a>
     </div>
     <div class="wrapper">
