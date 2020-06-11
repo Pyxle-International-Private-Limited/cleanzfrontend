@@ -18,7 +18,7 @@ export class ApiService {
   getEmployees(){
     return this.httpClient.get(`http://localhost:8000/api/employees`);
   }
-  getService(){
+  getServices(){
     return this.httpClient.get(`http://localhost:8000/api/services`);
   }
   getClientLocations(){

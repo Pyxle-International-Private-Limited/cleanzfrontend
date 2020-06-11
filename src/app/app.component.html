@@ -9,9 +9,9 @@
     </div>
     <div class="wrapper">
       <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
-        <li nz-menu-item nzSelected nzTitle="Dashboard">
+        <li nz-menu-item nz-tooltip nz  TooltipPlacement="right" [nzTitle]="isCollapsed ? 'Dashboard' : ''" nzSelected>
           <i nz-icon nzType="dashboard" nzTheme="outline"></i>
-          <a routerLink="./dashboard">Dashboard</a>
+          <a routerLink="/dashboard">Dashboard</a>
         </li>
         <li nz-submenu nzTitle="Providers" nzIcon="shop">
           <ul>

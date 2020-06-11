@@ -14,7 +14,7 @@ export class ServiceListComponent implements OnInit {
   constructor(private apiService: ApiService, private router: Router,private nzMessageService: NzMessageService) { }
 
   ngOnInit(): void {
-      this.apiService.getService().subscribe((data)=>{
+      this.apiService.getServices().subscribe((data)=>{
       this.services = data;
     });
   }

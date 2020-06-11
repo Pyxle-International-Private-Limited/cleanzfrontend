@@ -9,13 +9,13 @@ import { NzMessageService } from 'ng-zorro-antd/message';
   styleUrls: ['./sub-services.component.scss']
 })
 export class SubServicesComponent implements OnInit {
-  sub_services : object;
+  services : object;
 
   constructor(private apiService: ApiService, private router: Router,private nzMessageService: NzMessageService) { }
 
   ngOnInit(): void {
-      this.apiService.getSubServices().subscribe((data)=>{
-      this.sub_services = data;
+      this.apiService.getServices().subscribe((data)=>{
+      this.services = data;
     });
   }
  
