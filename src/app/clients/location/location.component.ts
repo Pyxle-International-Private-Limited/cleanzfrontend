@@ -52,7 +52,7 @@ export class LocationComponent implements OnInit {
   }
 
   confirmDelete(code:any,name: any): void {
-    this.nzMessageService.info('Provider deleted successfully');
+    this.nzMessageService.info('Deleted successfully');
   }
 
 }

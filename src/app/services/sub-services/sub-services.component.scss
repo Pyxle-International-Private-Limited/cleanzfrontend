@@ -1,3 +1,4 @@
+@import "../../../init.scss";
 .sub-services-list-wrapper {
     a.dropdown-menu {
       color: #5d5c5c;
@@ -11,6 +12,18 @@
           float: right;
           margin: 6px 0 0;
       }
+    }
+    td {
+      .anticon {
+        font-size: 16px;
+        color: $brightRed;
+        cursor: pointer;
+      }
+    }
+    .filter-company{
+      padding: 0 10px 0 5px;
+      height: 40px;
+      border: 1px solid #ddd;
     }
   }
   

@@ -1,14 +1,32 @@
 <div class="sub-services-list-wrapper">
   <h2>Sub Services</h2>
-  <a nz-dropdown class="dropdown-menu" nzTrigger="click" [nzDropdownMenu]="menu">
-    Sub Services
-    <i nz-icon nzType="down"></i>
-  </a>
-  <nz-dropdown-menu #menu="nzDropdownMenu">
-    <ul nz-menu nzSelectable>
-      <li nz-menu-item *ngFor="let data of services">
-        {{data.title}}
-      </li>
-    </ul>
-  </nz-dropdown-menu>
+  <div class="row btn-wrapper right-align clear-a">
+    <select [(ngModel)]="selectedService" class="filter-company" (change)="serviceSelect()">
+      <option *ngFor="let service of services" [ngValue]="service">{{service.title}}</option>
+    </select>
+    <button nz-button nzType="primary" [routerLink]="'../add'"><i nz-icon nzType="plus"></i>Add New</button>
+  </div>
+  <nz-table #filterTable [nzData]="subServices">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of filterTable.data">
+        <td>{{ data.title }}</td>
+        <td>
+          <span *ngIf="data.isactive">Active</span>
+          <span *ngIf="!data.isactive">Inactive</span>
+        </td>
+        <td>
+          <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this sub service?" nzPopconfirmPlacement="bottom"
+            (nzOnConfirm)="confirmDelete(data.providercode, data.name)" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
+              nzTheme="outline"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
 </div>

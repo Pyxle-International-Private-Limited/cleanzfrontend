@@ -1,8 +1,5 @@
 <div class="locations-list-wrapper">
     <h2>Locations</h2>
-
-    
-
     <div class="row btn-wrapper right-align clear-a">
       <select [(ngModel)]="selectedClient" class="filter-company" (change)="clientSelect()">
         <option *ngFor="let client of clients" [ngValue]="client">{{client.name}}</option>
