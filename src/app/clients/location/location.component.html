@@ -1,14 +1,41 @@
 <div class="locations-list-wrapper">
     <h2>Locations</h2>
-    <a nz-dropdown class="dropdown-menu" nzTrigger="click" [nzDropdownMenu]="menu">
-      Locations
-      <i nz-icon nzType="down"></i>
-    </a>
-    <nz-dropdown-menu #menu="nzDropdownMenu">
-      <ul nz-menu nzSelectable>
-        <li nz-menu-item *ngFor="let data of locations">
-          {{data.name}}
-        </li>
-      </ul>
-    </nz-dropdown-menu>
+
+    
+
+    <div class="row btn-wrapper right-align clear-a">
+      <select [(ngModel)]="selectedClient" class="filter-company" (change)="clientSelect()">
+        <option *ngFor="let client of clients" [ngValue]="client">{{client.name}}</option>
+      </select>
+      <button nz-button nzType="primary" [routerLink]="'../add'"><i nz-icon nzType="plus"></i>Add New</button>
+    </div>
+    <nz-table #filterTable [nzData]="locations">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Telephone</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of filterTable.data">
+          <td>{{ data.name }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.email }}</td>
+          <td>{{ data.telephone }}</td>
+          <td>
+            <span *ngIf="data.isactive">Active</span>
+            <span *ngIf="!data.isactive">Inactive</span>
+          </td>
+          <td>
+            <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this provider?" nzPopconfirmPlacement="bottom"
+              (nzOnConfirm)="confirmDelete(data.providercode, data.name)" (nzOnCancel)="cancelDelete()"><i nz-icon nzType="delete"
+                nzTheme="outline"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
 </div>
