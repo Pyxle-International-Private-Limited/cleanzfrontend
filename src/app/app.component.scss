@@ -85,7 +85,8 @@ nz-content {
   background: #fff;
   height: 100%;
   &.has-bg{
-    background-image: url('../assets/img/bg.png');
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7)),
+      url('../assets/img/bg.png');
       background-repeat: no-repeat;
       background-position: bottom right;
   }

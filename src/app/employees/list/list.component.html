@@ -11,7 +11,8 @@
           <th>Email</th>
           <th>Mobile</th>
           <th>Username</th>
-          <th>Action</th>
+          <th>Role</th>
+          <th>Status</th>
           <th></th>
         </tr>
       </thead>
@@ -22,6 +23,7 @@
           <td>{{ data.email }}</td>
           <td>{{ data.mobile }}</td>
           <td>{{ data.username }}</td>
+          <td>{{ data.roletype }}</td>
           <td>
             <span *ngIf="data.isactive">Active</span>
             <span *ngIf="!data.isactive">Inactive</span>
