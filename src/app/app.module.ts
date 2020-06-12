@@ -28,11 +28,12 @@ import { ServiceListComponent } from './services/list/list.component';
 import { ClientListComponent } from './clients/list/list.component';
 import { ClientAddComponent } from './clients/add/add.component';
 import { LocationComponent } from './clients/location/location.component';
-import { RoleComponent } from './employees/role/role.component';
 import { SubServicesComponent } from './services/sub-services/sub-services.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeAddComponent } from './employees/add/add.component';
 import { ServiceAddComponent } from './services/add/add.component';
+import { ProviderSubServicesComponent } from './providers/provider-sub-services/provider-sub-services.component';
+import { EmployeeRolesComponent } from './employees/employee-roles/employee-roles.component';
 
 registerLocaleData(en);
 
@@ -44,17 +45,17 @@ registerLocaleData(en);
     AddComponent,
     LocationComponent,
     SubServicesComponent,
-    RoleComponent,
     EmployeeListComponent,
     ServiceListComponent,
     ClientListComponent,
     ClientAddComponent,
     LocationComponent,
-    RoleComponent,
     SubServicesComponent,
     DashboardComponent,
     EmployeeAddComponent,
-    ServiceAddComponent
+    ServiceAddComponent,
+    ProviderSubServicesComponent,
+    EmployeeRolesComponent
   ],
   imports: [
     BrowserModule,
